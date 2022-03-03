@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Statuspage</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Statuspage">
+    <meta property="og:description" content="Automatically get incident updates from any Statuspage.io-powered page sent into your server.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/778808032204685352/782498399747702824/website_logo.png">
+    <meta name="theme-color" content="#7289DA">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <a href="/">
+    <div id="banner-main">
+      <img id="banner-img" src="https://cdn.discordapp.com/attachments/778808032204685352/782498399747702824/website_logo.png">
+    </div>
+    </a>
+    <br><br>
+    <div class="body">
+      <p class="no-box" style="text-align: right">
+        Also available with <code>sp!privacy</code>. <a href="/invite" target="_blank">Invite Statuspage here.</a>
+      </p>
+      <div class="uptime-box">
+        <h3>What This Bot Stores</h3>
+        <p>Upon being invited, Statuspage does not store any data, and no user-specific data is ever stored.</p>
+        <ul>
+          <li><p>The <code>add</code> command takes the following parameters and stores them in a database, along with a Discord-generated server ID (like <code>663898246804144138</code>):</p></li>
+          <ul>
+            <li><p><code>channel</code> (a text channel. only its Discord-generated ID is stored)</p></li>
+            <li><p><code>page</code> (the URL to a Statuspage.io-powered website)</p></li>
+          </ul>
+          <li><p>The <code>config</code> command has the following subcommands, which take one parameter each and stores that value in a database, along with a Discord-generated server ID (like <code>663898246804144138</code>):</p></li>
+          <ul>
+            <li><p><code>color</code> (takes <code>color</code>, a #HEXVAL of a color)</p></li>
+            <li><p><code>icon</code> (takes <code>image_url</code>, the URL to an image. if not included, tries to use a message attachment)</p></li>
+          </ul>
+          <li><p>The <code>pageconfig</code> command stores the same data as the <code>config</code> command, in addition to a Statuspage URL and channel ID. It also has an additional subcommand:</p></li>
+          <ul>
+            <li><p><code>roles</code> (takes <code>roles</code>, a list of names/@mentions/ids of roles in your server that you would like to be mentioned when this Statuspage has a new incident. stores only the Discord-generated IDs)</p></li>
+          </ul>
+        </ul>
+        </p>
+      </div>
+      <div class="uptime-box">
+        <h3>Why It's Stored & Who Can Access It</h3>
+        <p>
+          On an interval, Statuspage queries the <b>Statuspage URL</b> for new incidents. 
+          If there is a new incident, it gets the channel with the specified <b>channel 
+          ID</b> and sends a message to it detailing the new incident.<br>
+          Your <b>server ID</b> is stored for the <code>list</code> command, which displays every Statuspage 
+          set up in the server, along with the channel it is assigned to.<br><br>
+          This data is stored on a home server, which is only accessible by me (shay)
+        </p>
+      </div>
+      <div class="uptime-box">
+        <h3>How to Remove It</h3>
+        <p>The <code>remove</code> command takes the same parameters as <code>add</code>, and removes the same data from the database. That data being:</p>
+        <ul>
+          <li><p>Server ID</p></li>
+          <li><p>Channel ID</p></li>
+          <li><p>Statuspage URL</p></li>
+        </ul>
+        <p>You can also contact me (see the contact box) to request data removal.</p>
+      </div>
+      <div class="uptime-box">
+        <h3>Contact/Concerns</h3>
+        <p>
+          You can contact me directly at <code>shay#0038</code>, or
+          via the <a href="/support" target="_blank">support server</a> if friend requests aren't 
+          your style.
+        </p>
+      </div>
+      <br><br><br>
+      <div class="footer">
+        <hr>
+        <br>
+        <a href="/">← Main Page</a>
+        <span style="float:right"><a id="footer-based">Last updated • Apr. 2 2021</a></span>
+      </div>
+      <br><br><br><br><br>
+    </div>
+  </body>
+</html>

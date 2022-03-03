@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Statuspage</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Statuspage">
+    <meta property="og:description" content="Automatically get incident updates from any Statuspage.io-powered page sent into your server.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/778808032204685352/782498399747702824/website_logo.png">
+    <meta name="theme-color" content="#7289DA">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <a href="/">
+      <div id="banner-main">
+        <img id="banner-img" src="https://cdn.discordapp.com/attachments/778808032204685352/782498399747702824/website_logo.png">
+      </div>
+    </a>
+    <br><br>
+    <div class="body">
+      <a href="/invite" target="_blank">
+      <div id="invite-btn" class="notif green">
+          Click Here to Invite Statuspage
+      </div>
+      </a>
+      <br><br>
+      <p class="no-box" style="text-align: right">
+          Meta info for Statuspage. <a href="/invite" target="_blank">Invite Statuspage here.</a>
+      </p>
+      <div class="uptime-box">
+        <h3 id="usage">Usage</h3>
+        <p>Setting up Statuspage is as simple as running a single command:</p>
+        <img class="demo-image" src="https://cdn.discordapp.com/attachments/778808032204685352/931419580033814598/sp-demo-add.png">
+        <p>You can add as many Statuspages to as many channels as you see fit.<br><br>Remove Statuspages just as easily:</p>
+        <img class="demo-image" src="https://cdn.discordapp.com/attachments/778808032204685352/931420319615426590/sp-demo-remove.png">
+      </div>
+      <br><br>
+      <a href='#past-updates'>
+        <h3 id="past-updates" class="no-box">PAST UPDATES</h3>
+      </a>
+      <div class="update-box">
+        <h2 class="update-date-title">Jan 14, 2022</h2>
+        <hr>
+        <ul>
+          <li>Non-slash commands are no longer officially supported, please begin using slash commands if possible.</li>
+          <li>The <code>&#47;config</code> command has been redesigned to be much more user-friendly.</li>
+          <li>Incident displays have been redesigned; they now use emojis for status indicators and will show affected components if available.</li>
+          <li>Incident update messages will delete themselves if the incident was resolved, and can be disabled entirely with <code>&#47;config default send_updates:false</code> or <code>&#47;config page url:... send_updates:false</code>.</li>
+        </ul>
+      </div>
+      <div class="update-box">
+        <h2 class="update-date-title">Feb 7, 2021</h2>
+        <hr>
+        <ul>
+          <li>You can now set a default color & icon for your Statuspages (<code>config</code>).</li>
+          <li>You can also set a color, icon, & a non-limited list of roles to ping per-Statuspage 
+          (<code>pageconfig</code>) when an incident is created or updated.</li>
+          <li>Use <code>config show</code> to see your server defaults and <code>pageconfig show</code> to see a Statuspage's specific settings (doesn't take defaults into account).</li>
+          <li>Your default color will apply to every embed message sent by Statuspage, as your sort of "server color".</li>
+          <li><code>/botstats</code> has had some tweaking.</li>
+          <li>Trailing slashes should no longer be an issue when passing Statuspages to commands, e.g. <code>add #channel https://statuspage.website</code> is the same as <code>add #channel https://statuspage.website/</code>.</li>
+          <li>As a followup to the previous update, the "resolved" status should be parsed with relative accuracy, and in the case that it is, the update message will delete itself after 5 minutes. However, statuses are no longer displayed due to the troubles that the parser had during production. It's a bit of a low priority but I will make it more accurate in the future.</li>
+        </ul>
+      </div>
+      <div class="update-box">
+        <h2 class="update-date-title">Jan 26, 2021</h2>
+        <hr>
+        <ul>
+          <li>"incident updated" messages will now try to include the current status 
+          (Resolved/Investigating/etc) of the incident in the message. If the status 
+          is "Resolved", the message will delete itself after 5 minutes. If the current 
+          status could not be determined, the message will look and act like normal.</li>
+          <li>You can now call <code>botstats</code> (and <code>/botstats</code>) for a 
+          graph of the bot's stats over time. Not real-time; updates twice daily.</li>
+        </ul>
+      </div>
+      <div class="update-box">
+        <h2 class="update-date-title">Jan 20, 2021</h2>
+        <hr>
+        <ul>
+          <li><code>privacy</code> now links to <a href="/privacy">/privacy</a></li>
+          <li>Changed the message that appears when the bot doesn't have Read Message History permissions to say "old incident messages" instead of "old update messages"</li>
+          <li>Shortened the "incident updated" messages to remove "and the message has been edited accordingly"</li>
+          <li>"incident updated" messages will now delete themselves when the incident is updated again, reducing channel spam</li>
+          <li>Slash commands support. If commands don't appear in your chatbar when you type <code>/</code>, visit <a href="/slash">/slash</a> to re-authorize and fix that</li>
+        </ul>
+      </div>
+      <div class="update-box">
+        <h2 class="update-date-title">Nov 29, 2020</h2>
+        <hr>
+        <ul>
+          <li>Published the <a href="/">website</a></li>
+        </ul>
+      </div>
+      <div class="update-box">
+        <h2 class="update-date-title">Nov 28, 2020</h2>
+        <hr>
+        <ul>
+          <li>Added <code>privacy</code> command</li>
+          <li>Paginated <code>list</code> if there are more than 10 entries</li>
+          <li>Channel object is not fetched for <code>list</code> in case it does not exist (failsafe)</li>
+        </ul>
+      </div>
+      <div class="update-box">
+        <h2 class="update-date-title">Nov 27, 2020</h2>
+        <hr>
+        <ul>
+          <li>Fixed bug where some duplicate statuspages would only deliver to one channel</li>
+          <li>Statuspage now attempts to DM the server owner if it does not have permissions to send messages in the feed channel (if it doesnt have permissions to do that either, it will just silently fail)</li>
+        </ul>
+      </div>
+      <br><br><br>
+      <div class="footer">
+        <hr>
+        <br>
+        <a href="https://discord.gg/JmFK44U6Hb" target="_blank">← Update History</a>
+        <span style="float:right"><a href="https://discordstatus.com" id="footer-based" target="_blank">Design based on discordstatus.com</a></span>
+      </div>
+      <br><br><br><br><br>
+    </div>
+  </body>
+</html>

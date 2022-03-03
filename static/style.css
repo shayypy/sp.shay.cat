@@ -1,0 +1,137 @@
+@font-face {
+  font-family: whitney_text;
+  src: url('/static/fonts/whitney-medium.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: whitney_text;
+  src: url('/static/fonts/whitney-bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: whitney_text;
+  src: url('/static/fonts/whitney-bolditalics.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: whitney_text;
+  src: url('/static/fonts/whitney-mediumitalics.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: whitney_text;
+  margin: 0;
+}
+
+p {color: #99AAB5}
+a {text-decoration: none; color: #7289DA} 
+h2 {color: #737F8D}
+h3 {color: #737F8D}
+h4 {color: #737F8D}
+h5 {color: #737F8D}
+h6 {color: #737F8D}
+hr {margin: -2px; color: #99AAB5}
+li {color: #2E3338; margin-bottom: 5px;}
+code {
+  padding: 3px; border-radius: 3px;
+  color: #2E3338; background: #F2F3F5
+}
+.green {background: #43B581}
+.red {background: #F04747}
+.orange {background: #F5A61D}
+
+.no-box {
+  margin: 0px; 
+  margin-left: auto; margin-right: auto;
+  width: 60%; font-size: 14px;
+}
+
+#banner-img {
+  width: clamp(10px, 100%, 430px);
+}
+
+#invite-btn {
+  transition: 0.1s;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+#invite-btn:hover {
+  transition: 0.1s;
+  background: #329C6B;
+}
+
+.demo-image {
+  margin-left: auto; margin-right: auto;
+  width: clamp(50%, 100%, 600px);
+}
+
+#banner-main {
+  text-align: center;
+  background: #7289DA;
+  vertical-align: middle;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+.notif {
+  text-align: left;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  padding: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%
+}
+
+.uptime-box {
+  width: 60%; text-align: left;
+  margin-left: auto; margin-right: auto;
+  padding: 18px; font-size: 15px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  border-width: 1px; 
+  border-style: solid;
+  border-color: #E0E0E0;
+  border-radius: 3.5px;
+}
+
+#past-updates {
+  cursor: pointer;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.update-box {
+  width: 60%; text-align: left;
+  margin-right: auto; margin-left: auto;
+}
+
+.update-date-title {
+  font-size: 1.33em;
+}
+
+.footer {
+  width: 60%; text-align: left;
+  margin-right: auto; margin-left: auto;
+}
+
+#footer-based {
+  color: #99AAB5;
+}
+#footer-based:hover {
+  color: #7289DA;
+}
